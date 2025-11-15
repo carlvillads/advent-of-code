@@ -18,7 +18,7 @@ function deliver_presents(directions::String)
 
         presents_delivered += 1
 
-        if !(current_coordinates in visited_houses)
+        if current_coordinates ∉ visited_houses
             push!(visited_houses, copy(current_coordinates))
         end
     end
@@ -47,7 +47,7 @@ function deliver_with_robosanta(directions::String)
                 coordinates_santa[2] += 1
             end
 
-            if !(coordinates_santa in visited_houses)
+            if coordinates_santa ∉ visited_houses
                 push!(visited_houses, copy(coordinates_santa))
             end
         else  # robosanta
@@ -61,7 +61,7 @@ function deliver_with_robosanta(directions::String)
                 coordinates_robosanta[2] += 1
             end
 
-            if !(coordinates_robosanta in visited_houses)
+            if coordinates_robosanta ∉ visited_houses
                 push!(visited_houses, copy(coordinates_robosanta))
             end
         end
