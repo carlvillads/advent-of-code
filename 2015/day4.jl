@@ -50,7 +50,7 @@ end
 
 function main()
     givenkey = read("2015/inputs/day4.txt", String)
-    
+
     println("Single threaded search:")
     time1 = @elapsed lowestnumber = findcoin(givenkey, "00000")
     println("The lowest positive number to match the key is: '$(lowestnumber)' (found in $(round(time1, digits=3))s)")
