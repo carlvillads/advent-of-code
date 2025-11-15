@@ -1,6 +1,8 @@
-d = fileread('inputs/day3.txt');
-deliverPresents(d)
-deliverWithRoboSanta(d)
+function day3
+    d = fileread('inputs/day3.txt');
+    deliverPresents(d)
+    deliverWithRoboSanta(d)
+end
 
 
 function n = deliverPresents(directions)

@@ -1,19 +1,21 @@
-lines = readlines("/Users/cv/projects/aoc/inputs/2015/day2.txt");
-totalPaper = 0;
-totalRibbon = 0;
+function day2
+    lines = readlines("/Users/cv/projects/aoc/inputs/2015/day2.txt");
+    totalPaper = 0;
+    totalRibbon = 0;
 
-for i = 1:length(lines)
-    line = strtrim(lines(i));
-    if strlength(line) == 0
-        continue;
+    for i = 1:length(lines)
+        line = strtrim(lines(i));
+        if strlength(line) == 0
+            continue;
+        end
+        parts = split(line, 'x');
+        d = str2double(parts);
+        totalPaper = totalPaper + requiredWrappingPaper(d(1),d(2),d(3));
+        totalRibbon = totalRibbon + requiredRibbon(d(1),d(2),d(3));
     end
-    parts = split(line, 'x');
-    d = str2double(parts);
-    totalPaper = totalPaper + requiredWrappingPaper(d(1),d(2),d(3));
-    totalRibbon = totalRibbon + requiredRibbon(d(1),d(2),d(3));
+    fprintf("The elves should order %d squre feet of wrapping paper\n", totalPaper)
+    fprintf("The elves should order %d feet of ribbon\n", totalRibbon)
 end
-fprintf("The elves should order %d squre feet of wrapping paper\n", totalPaper)
-fprintf("The elves should order %d feet of ribbon\n", totalRibbon)
 
 
 function a = requiredWrappingPaper(l,w,h)

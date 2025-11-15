@@ -1,6 +1,8 @@
-givenInstruction = fileread("inputs/2015/day1.txt");
-GuideSanta(givenInstruction)
-FindBasement(givenInstruction)
+function day1
+    givenInstruction = fileread("inputs/2015/day1.txt");
+    GuideSanta(givenInstruction)
+    FindBasement(givenInstruction)
+end
 
 
 function floor = GuideSanta(directions)
