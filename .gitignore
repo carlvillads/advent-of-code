@@ -1,3 +1,4 @@
 inputs/
 .DS_Store
 *.asv
+template.cpp
