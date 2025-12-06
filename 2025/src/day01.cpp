@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
 #include "input_reader.h"
 
 void part1(const std::vector<std::string>& lines) {
