@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sstream>
 #include <vector>
 #include <string>
 #include <algorithm>
@@ -43,10 +42,10 @@ long long greedyMaxJoltage(const vector<int>& bank) {
 
 void part1(const vector<string>& lines) {
     int totalJoltageOutput = 0;
-    
+
     for (const auto& line : lines) {
         vector<int> bank;
-        transform(line.begin(), line.end(), back_inserter(bank), 
+        transform(line.begin(), line.end(), back_inserter(bank),
         [](char c) { return c - '0'; });  // convert line into vector<int>
 
         int maxBankJoltage = findMaxJoltage(bank);
@@ -58,10 +57,10 @@ void part1(const vector<string>& lines) {
 
 void part2(const vector<string>& lines) {
     long long totalJoltageOutput = 0;
-    
+
     for (const auto& line : lines) {
         vector<int> bank;
-        transform(line.begin(), line.end(), back_inserter(bank), 
+        transform(line.begin(), line.end(), back_inserter(bank),
         [](char c) { return c - '0'; });
 
         long long maxBankJoltage = greedyMaxJoltage(bank);

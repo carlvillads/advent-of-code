@@ -44,7 +44,7 @@ void part2(const std::vector<std::string>& lines) {
             current_pos = ((current_pos - amount) % 100 + 100) % 100;
         }
     }
-    
+
     std::cout << "The real password is " << passed_zero_count << std::endl;
 }
 

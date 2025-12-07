@@ -69,7 +69,7 @@ void part1(const std::vector<std::string>& lines) {
 
         for (int L = 2; L <= 18; L += 2) {
             long long halfLen = L / 2;
-            
+
             unsigned long long powerOf10 = 1;
             for(int k=0; k<halfLen; ++k) powerOf10 *= 10;
             unsigned long long F = powerOf10 + 1;
@@ -77,8 +77,8 @@ void part1(const std::vector<std::string>& lines) {
             long long minS_digits = powerOf10 / 10;
             long long maxS_digits = powerOf10 - 1;
 
-            long long minS_range = (A + F - 1) / F; 
-            long long maxS_range = B / F;           
+            long long minS_range = (A + F - 1) / F;
+            long long maxS_range = B / F;
 
             long long startS = std::max(minS_digits, minS_range);
             long long endS = std::min(maxS_digits, maxS_range);
@@ -98,7 +98,7 @@ void part2(const std::vector<std::string>& lines) {
     std::set<long long> uniqueInvalidIDs;
 
     for (int L = 1; L <= 9; ++L) {
-        
+
         // Iterate Repeat Counts (k)
         for (int k = 2; k <= 18; ++k) {
             if (L * k > 18) break;
